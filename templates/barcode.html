@@ -1,0 +1,17 @@
+<ion-view view-title="Barcode" ng-controller="BarcodeCtrl as vm">
+  <ion-content class="has-header padding">
+    <div class="row">
+      <div class="col">
+        <button class="button button-full button-balanced" ng-click="vm.scanBarcode()">Scan Barcode</button>
+      </div>
+      <div class="col">
+        <button class="button button-full button-balanced" ng-click="vm.gotoBarcodeUrl()">Go To Barcode URL</button>
+      </div>
+    </div>
+
+    <h2>{{vm.barCode}}</h2>
+    <h2>{{vm.barCodeUrl}}</h2>
+
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,13 @@
+<ion-view view-title="My Device" ng-controller="DeviceCtrl as vm">
+  <ion-content class="has-header padding">
+    <button class="button button-full button-balanced" ng-click="vm.deviceModel()">Device Model</button>
+    <button class="button button-full button-balanced" ng-click="vm.devicePlatform()">Device Platform</button>
+    <button class="button button-full button-balanced" ng-click="vm.deviceUUID()">Device UUID</button>
+    <button class="button button-full button-balanced" ng-click="vm.deviceVersion()">Device Version</button>
+    <button class="button button-full button-balanced" ng-click="vm.cordovaVersion()">Cordova Version</button>
+    <button class="button button-full button-balanced" ng-click="vm.device()">Device Detail</button>
+
+    <h2>{{vm.results}}</h2>
+
+  </ion-content>
+</ion-view>
