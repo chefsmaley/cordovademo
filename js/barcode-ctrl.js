@@ -9,22 +9,26 @@
   function BarcodeCtrl($cordovaBarcodeScanner, $scope) {
     var vm=this;
 
-    vm.scanBarcode = function () {
-      $cordovaBarcodeScanner.scan().then(function (barcodeData) {
-        // Success! barcode data here
-        vm.barCode = "data: " + barcodeData;
-      }, function (err) {
-        alert("An error occurred: " + err);
-      });
-    };
+      vm.scanBarcode = function () {
+        document.addEventListener("deviceready", function () {
+          $cordovaBarcodeScanner.scan().then(function (barcodeData) {
+            // Success! barcode data here
+            vm.barCode = "data: " + JSON.stringify(barcodeData);
+          }, function (err) {
+            alert("An error occurred: " + err);
+          });
+        }, false);
+      };
 
     vm.gotoBarcodeUrl = function () {
+      document.addEventListener("deviceready", function () {
       $cordovaBarcodeScanner.scan().then(function (barcodeData) {
         // Success! barcode data here
         vm.barCodeUrl = "<a href=\'" + barcodeData + "\'>click</a>";
       }, function (err) {
         alert("An error occurred: " + err);
       });
+      }, false);
     };
 
     //document.addEventListener("deviceready", function () {
