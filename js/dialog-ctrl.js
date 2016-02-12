@@ -9,6 +9,8 @@
   function DialogCtrl($cordovaDialogs) {
     var vm=this;
 
+    vm.results={};
+
     vm.alert = function() {
       console.log("Called alert");
 
@@ -22,7 +24,10 @@
     vm.confirm = function() {
       console.log("Called confirm");
 
-      $cordovaDialogs.alert('Are you sure?', "Confirmation Witter", ["OK", "No!"]);
+      $cordovaDialogs.confirm('Are you sure?', "Confirmation Witter", ['OK', 'No', 'Dunno'])
+        .then(function(buttonIndex) {
+          confirmClosed(buttonIndex);
+        });
     };
 
     function confirmClosed(buttonIndex) {
@@ -32,7 +37,11 @@
     vm.prompt = function() {
       console.log("Called prompt");
 
-      $cordovaDialogs.prompt('Please Enter userId', "Just Witter", ["Enter", "Cancel"], "user");
+      $cordovaDialogs.prompt('Please Enter userId', "Just Witter", ['Enter', 'Reset'], "user")
+        .then(function(result) {
+          vm.results = result;
+        });
+
     };
 
     function promptClosed(results) {

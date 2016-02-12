@@ -1,0 +1,15 @@
+<ion-view view-title="SendSMS" ng-controller="SendSmsCtrl as vm">
+  <ion-content class="has-header padding">
+
+    <h2>Send an SMS</h2>
+
+    <input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
+    <textarea id="messageTxt" placeholder="Enter message"></textarea>
+
+    <button class="button button-full button-balanced" ng-click="vm.sendsms('07599649477',0)">Send SMS</button>
+
+    <!--<input type="button" onclick="app.sendSms()" value="Send SMS" />-->
+
+    <h2>Message: {{vm.sendres}}</h2>
+  </ion-content>
+</ion-view>
