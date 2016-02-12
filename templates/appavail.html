@@ -1,0 +1,10 @@
+<ion-view view-title="AppAvailability" ng-controller="AppAvailCtrl as vm">
+  <ion-content class="has-header padding">
+
+    <h2>Check if these Apps are installed</h2>
+    <button class="button button-full button-balanced" ng-click="vm.check('twitter')">Check Twitter</button>
+    <button class="button button-full button-balanced" ng-click="vm.checkandroidtwit('twitter')">Check Android Twitter</button>
+
+    <h2>Twitter: {{vm.twitter}}</h2>
+  </ion-content>
+</ion-view>

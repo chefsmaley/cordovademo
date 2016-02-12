@@ -131,7 +131,34 @@ angular.module('ngApp', ['ngCordova', 'ionic','ionic.service.core', 'starter.con
         }
       }
     })
-  .state('tab.account', {
+    .state('tab.actionsheet', {
+      url: '/actionsheet',
+      views: {
+        'cordova': {
+          templateUrl: 'templates/actionsheet.html',
+          controller: 'ActionSheetCtrl'
+        }
+      }
+    })
+    .state('tab.appavail', {
+      url: '/appavail',
+      views: {
+        'cordova': {
+          templateUrl: 'templates/appavail.html',
+          controller: 'AppAvailCtrl'
+        }
+      }
+    })
+    .state('tab.sendsms', {
+      url: '/sendsms',
+      views: {
+        'cordova': {
+          templateUrl: 'templates/sendsms.html',
+          controller: 'SendSmsCtrl'
+        }
+      }
+    })
+    .state('tab.account', {
     url: '/account',
     views: {
       'tab-account': {
