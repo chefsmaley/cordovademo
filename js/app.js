@@ -158,6 +158,15 @@ angular.module('ngApp', ['ngCordova', 'ionic','ionic.service.core', 'starter.con
         }
       }
     })
+    .state('tab.datetimepick', {
+      url: '/datetimepick',
+      views: {
+        'cordova': {
+          templateUrl: 'templates/datetimepick.html',
+          controller: 'DateTimePickCtrl'
+        }
+      }
+    })
     .state('tab.account', {
     url: '/account',
     views: {

@@ -2,6 +2,16 @@
 Based on some demo code taken from Pluralsight michelotti
 And augmented on the ionic tabs-chat starter app
 
+Includes simple hard-coded examples of
+* Dialogs
+* Vibrate
+* Camera
+* Barcode
+* Device Info
+* Network status
+* App Availability
+* Send SMS Text Message
+
 Now also looked into the ionic chapter of the MEAN Stack training on MongoDB website
 See https://www.edx.org/course/introduction-mongodb-using-mean-stack-mongodbx-m101x
 
