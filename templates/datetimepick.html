@@ -1,0 +1,11 @@
+<ion-view view-title="DateTimePick" ng-controller="DateTimePickCtrl as vm">
+  <ion-content class="has-header padding">
+
+    <button class="button button-full button-balanced" ng-click="vm.pickdate()">Pick Date</button>
+    <button class="button button-full button-balanced" ng-click="vm.picktime()">Pick Time</button>
+
+    <h2>Last Selected: {{vm.thedate}}</h2>
+    <h2>Last Selected: {{vm.thetime}}</h2>
+
+  </ion-content>
+</ion-view>
