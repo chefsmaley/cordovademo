@@ -1,0 +1,4 @@
+# ignore generated css
+css/
+lib/
+img/
