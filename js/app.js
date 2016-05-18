@@ -140,7 +140,15 @@ angular.module('ngApp', ['ngResource', 'ngCordova', 'ionic','ionic.service.core'
         }
       }
     })
-    .state('tab.appavail', {
+    .state('tab.appversion', {
+      url: '/appversion',
+      views: {
+        'cordova': {
+          templateUrl: 'templates/appversion.html',
+          controller: 'AppVersionCtrl'
+        }
+      }
+    })    .state('tab.appavail', {
       url: '/appavail',
       views: {
         'cordova': {
