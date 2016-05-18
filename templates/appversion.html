@@ -1,0 +1,14 @@
+<ion-view view-title="AppVersion" ng-controller="AppVersionCtrl as vm">
+  <ion-content class="has-header padding">
+    <button class="button button-full button-balanced" ng-click="vm.getappdata()">Check App Version</button>
+
+    <h2>App Version: {{vm.appVersion}}</h2>
+
+    <h2>App Build: {{vm.appBuild}}</h2>
+
+    <h2>App Name: {{vm.appName}}</h2>
+
+    <h2>App Package: {{vm.appPackage}}</h2>
+
+  </ion-content>
+</ion-view>
