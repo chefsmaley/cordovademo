@@ -4,8 +4,8 @@
     <button class="button button-full button-balanced" ng-click="vm.pickdate()">Pick Date</button>
     <button class="button button-full button-balanced" ng-click="vm.picktime()">Pick Time</button>
 
-    <h2>Last Selected: {{vm.thedate}}</h2>
-    <h2>Last Selected: {{vm.thetime}}</h2>
+    <h2>Last Selected: {{vm.thedate | date : short}}</h2>
+    <h2>Last Selected: {{vm.thetime | date : "dd/MM/yyyy 'at' HH:mm:ss"}}</h2>
 
   </ion-content>
 </ion-view>

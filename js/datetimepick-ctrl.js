@@ -22,7 +22,7 @@
         allowOldDates: true,
         allowFutureDates: true,
         doneButtonLabel: 'Set Date',
-        doneButtonColor: '#F2F3F4',
+        doneButtonColor: '#22F3F4',
         cancelButtonLabel: 'CANCEL',
         cancelButtonColor: '#000000'
       };
@@ -43,10 +43,10 @@
       var options = {
         date: new Date(),
         mode: 'time', // or 'date'
-        minDate: new Date() - 1000,
-        maxDate: new Date() + 1000,
+        minDate: new Date() - 10000,
+        maxDate: new Date() + 10000,
         is24Hour: true,
-        minuteInterval: 5,
+        minuteInterval: 1,
         allowOldDates: true,
         allowFutureDates: true,
         doneButtonLabel: 'Save Time',
@@ -57,8 +57,8 @@
 
       document.addEventListener("deviceready", function () {
 
-        $cordovaDatePicker.show(options).then(function (date) {
-          vm.thetime=date;
+        $cordovaDatePicker.show(options).then(function (time) {
+          vm.thetime=time;
           picked(thetime);
         });
 
@@ -66,6 +66,7 @@
     };
 
     function picked(data) {
+      console.log("Select: " + data);
       $cordovaDialogs.alert('Selected ' + data);
     }
   }
